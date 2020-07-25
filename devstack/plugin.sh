@@ -49,8 +49,7 @@ function postconfig_hook {
     if [[ -f "${PATCH_DIR}/d371520.diff" ]]; then
         patch -p1 -d $DEST/trove-dashboard < ${PATCH_DIR}/d371520.diff 
         if [[ ${?} -eq 0 ]]; then
-            echo "[ERROR] the command should exit with zero, but didn't: patch -p1 -d $DEST/trove-dashboard < ${PATCH_DIR}/d371520.diff"
-            exit 1
+            echo "[WARNING] the command should exit with zero, but didn't(status=${?}): patch -p1 -d $DEST/trove-dashboard < ${PATCH_DIR}/d371520.diff"
         fi
     else
         echo "[ERROR] ${PATCH_DIR}/d371520.diff should exist, but not found"
