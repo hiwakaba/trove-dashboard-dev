@@ -59,7 +59,8 @@ function postconfig_hook {
 }
 
 # check for service enabled
-if is_service_enabled template; then
+if is_service_enabled trove-dashboard-dev ; then
+    echo "[INFO] trove-dashboard-dev is enabled"
 
     if [[ "$1" == "stack" && "$2" == "pre-install" ]]; then
         # Downloads dashboard patches
@@ -83,6 +84,9 @@ if is_service_enabled template; then
         # no-op
         :
     fi
+else
+    echo "[WARNING] trove-dashboard-dev is disabled"
+fi
 fi
 
 
