@@ -87,6 +87,4 @@ if is_service_enabled trove-dashboard-dev ; then
 else
     echo "[WARNING] trove-dashboard-dev is disabled"
 fi
-fi
-
 
