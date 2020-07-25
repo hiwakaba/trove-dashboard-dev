@@ -12,7 +12,7 @@
 # enable_plugin horizon https://opendev.org/openstack/horizon.git stable/ussuri
 # enable_plugin trove https://opendev.org/openstack/trove.git stable/ussuri
 # enable_plugin trove-dashboard https://opendev.org/openstack/trove-dashboard stable/ussuri
-# enable_plugin trove-dashboard-hiwakaba https://github.com/hiwakaba/trove-dashboard-hiwakaba stable/ussuri
+# enable_plugin trove-dashboard-dev https://github.com/hiwakaba/trove-dashboard-dev stable/ussuri
 # ```
 # Then, run stack.sh!
 #
@@ -22,7 +22,7 @@ XTRACE=$(set +o | grep xtrace)
 set +o xtrace
 
 # setenv
-PATCH_DIR=$DEST/trove-dashboard-hiwakaba/devstack/patches
+PATCH_DIR=$DEST/trove-dashboard-dev/devstack/patches
 
 function preinstall_hook {
     # Downloads #738333 patches from review.opendev.org
