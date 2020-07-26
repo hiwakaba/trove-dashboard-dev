@@ -10,6 +10,6 @@ $ git clone https://github.com/hiwakaba/trove-dashboard-dev --branch stable/ussu
 $ cd trove-dashboard-dev
 $ vagrant plugin install vagrant-disksize
 $ vagrant up
-$ vagrant ssh -c "sudo su - stack sh -c './setup.sh'"
+$ vagrant ssh -c "sudo su - stack sh -c './setup_devstack.sh'"
 ```
 Then, open http://http://192.168.33.30/dashboard/project/databases/launch, then you will see the list of flavors!
