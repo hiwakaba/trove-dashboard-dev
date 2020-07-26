@@ -1,12 +1,15 @@
 # trove-dashboard-dev
 
-## Usage
+Here is an easy way to setup devstack with trove-dashboard for development on your PC by using Vagrant.
 
-Adds the following lines to local.conf in devstack, then run stack.sh!
-```
-enable_plugin horizon https://opendev.org/openstack/horizon.git stable/ussuri
-enable_plugin trove https://opendev.org/openstack/trove.git stable/ussuri
-enable_plugin trove-dashboard https://opendev.org/openstack/trove-dashboard stable/ussuri
-enable_plugin trove-dashboard-dev https://github.com/hiwakaba/trove-dashboard-dev stable/ussuri
-```
+## Usage with Vagrant
 
+Run the following commands on your PC.
+```
+$ git clone https://github.com/hiwakaba/trove-dashboard-dev --branch stable/ussuri
+$ cd trove-dashboard-dev
+$ vagrant plugin install vagrant-disksize
+$ vagrant up
+$ vagrant ssh -c "sudo su - stack sh -c './setup.sh'"
+```
+Then, open http://http://192.168.33.30/dashboard/project/databases/launch, then you will see the list of flavors!
